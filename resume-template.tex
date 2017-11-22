@@ -1,0 +1,79 @@
+% LaTeX source of my resume
+% =========================
+
+% Commented for easy reuse... ;)
+
+% start a document with the here given default font size and paper size
+\documentclass[10pt,a4paper]{article}
+
+% include the `tex` instructions that takes care of loading packages and defining commands
+\include{resume-commands}
+
+\begin{document}  % begin the content of the document
+\sloppy  % this to relax whitespacing in favour of straight margins
+
+\maintitle{Jane Smith}{}  % title on top of the document
+\nobreakvspace{0.3em}  % add some page break averse vertical spacing
+
+% \noindent prevents paragraph's first lines from indenting
+% \mbox is used to obfuscate the email address
+% \sbull is a spaced bullet
+% \href well..
+% \\ breaks the line into a new paragraph
+\noindent\href{mailto:recipient@example.com}{recipient\mbox{}@\mbox{}example.com}\sbull
+555.555.5555\sbull
+\href{https://example.com}{example.com}
+\\
+1 Market St\sbull
+Philadelphia, PA\sbull
+19001
+
+\spacedhrule{0.9em}{-0.4em}  % a horizontal line with some vertical spacing before and after
+
+%\roottitle{Summary}  % a root section title
+%
+%\vspace{-1.3em}  % some vertical spacing
+%\begin{multicols}{2}  % open a multicolumn environment
+%\noindent \emph{}
+%\\
+%\\
+%\end{multicols}
+%
+%\spacedhrule{0em}{-0.4em}
+\frenchspacing
+\roottitle{Experience}
+
+\headedsection  % sets the header for the section and includes any subsections
+  {Widget Co}
+  {\textsc{Philadelphia, PA}} {%
+
+  \headedsubsection  % sets the header for a subsection and contains usually body text
+    {Senior Widget Engineer}
+    {Jan \apo17 -- Present}
+    {\bodytext{
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer tempus tellus in consequat vestibulum. Proin eleifend dolor in blandit dignissim. Nunc at imperdiet nisl. Nullam dictum elit eget felis interdum lobortis. Nam sit amet porttitor ipsum. Aenean sollicitudin tellus eget consectetur accumsan.
+    }}
+
+  \headedsubsection  % sets the header for a subsection and contains usually body text
+    {Junior Widget Engineer}
+    {Jan \apo16 -- Dec \apo16}
+    {\bodytext{
+    Etiam vel massa vitae lacus venenatis semper. Proin sit amet convallis diam, ut vulputate ipsum. Cras at arcu felis. Nunc a neque vitae metus faucibus feugiat in et ligula. Quisque pharetra, tellus vel sodales faucibus, arcu lectus efficitur purus, a euismod libero turpis a nisi. Nullam dolor enim, laoreet ut gravida nec, egestas vel nisl. Nunc vitae nisi et sem laoreet iaculis non quis erat.
+    }}
+}
+
+\headedsection  % sets the header for the section and includes any subsections
+  {Gasket, Inc}
+  {\textsc{Philadelphia, PA}} {%
+
+  \headedsubsection  % sets the header for a subsection and contains usually body text
+    {Gasket Engineer}
+    {Jan \apo15 -- Dec \apo15}
+    {\bodytext{
+    Morbi non libero nec ante egestas laoreet. Aliquam arcu ex, hendrerit eget interdum eu, posuere in nulla. Duis a ex purus. Curabitur eget elit a dolor semper fermentum. Sed sodales condimentum placerat. Maecenas at leo dolor. Cras vel risus non elit aliquam congue at non massa. Ut suscipit pulvinar justo in sodales. Integer fringilla quis mauris a pulvinar.
+    }}
+}
+
+\spacedhrule{-0.2em}{-0.4em}
+
+\end{document}
